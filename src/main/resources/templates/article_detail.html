@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="../../favicon.ico"/>
+        <title>Articlelist</title>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+
+        <!-- Bootstrap core CSS -->
+        <!--<link href="../static/css/bootstrap.css" rel="stylesheet" th:href="@{/css/bootstrap.css}"/>-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div th:replace="fragments/header :: header">
+            <!-- ============================================================================ -->
+            <!-- This content is only used for static prototyping purposes (natural templates)-->
+            <!-- and is therefore entirely optional, as this markup fragment will be included -->
+            <!-- from "fragments/header.html" at runtime.                                     -->
+            <!-- ============================================================================ -->
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#">Static header</a>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">Home</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <h1>Article-Detailview</h1>
+            <form th:action="@{'/article/' + ${article.uid}}" th:object="${articleForm}" method="POST">
+                <div class="form-group">
+                    <input type="hidden" th:field="${article.uid}" class="form-control" th:value="${article.uid}" />    
+                </div>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" th:field="${article.name}" class="form-control" th:value="${article.name}" />    
+                </div>
+                <div class="form-group">
+                    <label for="description">Description:</label>
+                    <textarea th:field="${article.description}" class="form-control" th:value="${article.description}">    
+                    </textarea>
+                </div>
+                <div class="form-group">
+                    <label for="type">Price:</label>
+                    <input type="number" min="1" step="0.01" th:field="${article.price}" class="form-control" th:value="${article.price}" />    
+                </div>
+                <div class="form-group">
+                    <label for="type">Units:</label>
+                    <input type="number" min="0" th:field="${article.units}" class="form-control" th:value="${article.units}" />    
+                </div>
+                
+                <input type="submit" class="btn btn-success" value="Edit" />
+                <!--<a href="articleList" th:href="@{'/article?articleId=' + ${article.uid}}" class="btn btn-large btn-success">Edit</a>-->
+                <a href="articleList" th:href="@{/articleList}" class="btn btn-large btn-default">Back</a>
+            </form>
+            
+            
+            <div th:replace="fragments/footer :: footer">&copy; 2016 The Static Templates</div>
+        </div>
+        
+
+
+    </body>
+</html>
+

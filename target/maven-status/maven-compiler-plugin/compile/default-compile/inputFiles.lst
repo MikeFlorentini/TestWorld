@@ -1,0 +1,11 @@
+/home/mike/NetBeansProjects/TestWorld/src/main/java/de/micon/TestWorld/model/Article.java
+/home/mike/NetBeansProjects/TestWorld/src/main/java/de/micon/TestWorld/model/AuditModel.java
+/home/mike/NetBeansProjects/TestWorld/src/main/java/de/micon/TestWorld/service/ArticleServiceImpl.java
+/home/mike/NetBeansProjects/TestWorld/src/main/java/de/micon/TestWorld/controller/ArticleController.java
+/home/mike/NetBeansProjects/TestWorld/src/main/java/de/micon/TestWorld/controller/MainController.java
+/home/mike/NetBeansProjects/TestWorld/src/main/java/de/micon/TestWorld/controller/ExportController.java
+/home/mike/NetBeansProjects/TestWorld/src/main/java/de/micon/TestWorld/service/ArticleService.java
+/home/mike/NetBeansProjects/TestWorld/src/main/java/de/micon/TestWorld/form/ArticleForm.java
+/home/mike/NetBeansProjects/TestWorld/src/main/java/de/micon/TestWorld/TestWorldApplication.java
+/home/mike/NetBeansProjects/TestWorld/src/main/java/de/micon/TestWorld/exception/ResourceNotFoundException.java
+/home/mike/NetBeansProjects/TestWorld/src/main/java/de/micon/TestWorld/repository/ArticleRepository.java
