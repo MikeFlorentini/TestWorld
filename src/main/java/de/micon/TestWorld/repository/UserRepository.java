@@ -5,13 +5,15 @@
  */
 package de.micon.TestWorld.repository;
 
-import de.micon.TestWorld.entity.Article;
+import de.micon.TestWorld.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 /**
  *
- * @author mike
+ * @author mmende
  */
 @Repository
-public interface ArticleRepository extends JpaRepository<Article, Long> {}
+public interface UserRepository extends JpaRepository<User, Long>{
+    
+}

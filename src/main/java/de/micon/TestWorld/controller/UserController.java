@@ -5,31 +5,30 @@
  */
 package de.micon.TestWorld.controller;
 
-import de.micon.TestWorld.entity.Article;
-import java.util.ArrayList;
-import java.util.List;
+import de.micon.TestWorld.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 /**
  *
- * @author mike
+ * @author mmende
  */
 @Controller
-public class MainController {
+public class UserController {
+    
+    private final UserService userService;
 
     @Autowired
-    public MainController() {
+    public UserController(UserService userService) {
+        this.userService = userService;
     }
-
-    @Value("${welcome.message}")
-    private String message;
-
-    @GetMapping("/")
-    public String getMain() {
-        return "index";
+    
+    @GetMapping("/user")
+    public String listUser(Model model) {
+        model.addAttribute("users", userService.getAllUser());
+        
+        return "user_list";
     }
-
 }

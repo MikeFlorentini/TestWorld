@@ -5,7 +5,7 @@
  */
 package de.micon.TestWorld.service;
 
-import de.micon.TestWorld.model.Article;
+import de.micon.TestWorld.entity.Article;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

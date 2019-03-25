@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package de.micon.TestWorld.model;
+package de.micon.TestWorld.entity;
 
+import de.micon.TestWorld.model.AuditModel;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
